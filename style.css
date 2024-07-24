@@ -1,0 +1,325 @@
+/*html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1dff3;
+    color: rgb(34, 31, 31);
+}
+
+.logo-text{
+text-align: center;
+padding-left: 40%;
+}
+
+.header {
+    padding: 16px 64px;
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    border-bottom: 1px solid #56647b;
+    position: sticky;
+    top: 0px;
+    background-color: rgba(128, 0, 128, 0.2);
+
+  } 
+
+  .header .navigation {
+    margin-left: auto;
+    margin-right: 24px;
+  }
+
+.header .nav-list {
+    display: flex;
+    gap: 12px;
+  }
+  .header .nav-list a {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+.navigation .nav-list .nav-item{
+    list-style: none;
+}
+
+.header .nav1 {
+    margin-left: auto;
+    margin-right: 5px;
+  }
+
+  .nav1 .nav-list {
+    display: flex;
+    gap: 12px;
+  }
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1dff3;
+    color: rgb(34, 31, 31);
+}
+
+.logo-text {
+    text-align: center;
+    flex: 1;
+    font-family: "Playwrite PL" , Arial, Helvetica, sans-serif;
+}
+
+.header {
+    padding: 16px 64px;
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    border-bottom: 1px solid #56647b;
+    position: sticky;
+    top: 0px;
+    background-color: rgba(238, 232, 238, 0.2);
+    z-index: 1000;
+}
+
+.header .nav-left,
+.header .nav-right {
+    display: flex;
+}
+
+.header .nav-list {
+    display: flex;
+    gap: 12px;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+
+.header .nav-list a {
+    list-style: none;
+    text-decoration: none;
+    color: #56647b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*IMAGE*/
+.image-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* разстояние между изображенията */
+    justify-content: center; /* центриране на изображенията */
+}
+.image-container {
+    position: relative;
+   width: 650px; /* задайте желаната ширина */
+    height: 600px; /* задайте желаната височина */
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.second-image {
+    opacity: 0;
+}
+
+.image-container:hover .second-image {
+    opacity: 1;
+}
+
+.image-container:hover .first-image {
+    opacity: 0;
+}
+
+
+
+/* PRODUCTS */
+ .products { 
+    display: flex;
+    gap: 10px; /* разстояние между изображенията */
+    justify-content: center; /* центриране на изображенията */
+ }
+
+.image-products {
+    position: relative;
+    width: 323px; /* задайте желаната ширина */
+    height: 300px; /* задайте желаната височина */
+}
+
+.image-products img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* осигурява, че изображенията ще запълнят цялото пространство на контейнера */
+    border-radius: 10px; /* закръгляване на ъглите на изображенията */
+    transition: transform 0.3s ease; /* Плавно преход */
+}
+
+.image-products:hover img {
+    transform: scale(1.2); /* Увеличаване на размера при хоувър */
+}
+
+.image-text {
+    position: absolute;
+    bottom: 10px; /* разстояние отгоре */
+    left: 50%; /* центриране хоризонтално */
+    transform: translateX(-50%); /* коригира центрирането */ 
+    background-color: rgba(241, 210, 240, 0.8); /* цвят на задното покритие */
+    color: #56647b; /* цвят на текста */
+    padding: 5px 20px; /* вътрешно разстояние */
+    border: 1.5px solid #56647b;
+    border-radius: 5px; /* закръгляване на ъглите */
+    font-size: 25px; /* размер на шрифта */
+    font-family: "Caveat" , Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+
+
+
+
+/* ICONS & MQ FOR ICONS*/
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px; /* Разстояние между елементите */
+    padding-top: 40px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3 - 32px); /* Ширината на всяка икона, за да са три на ред */
+    margin: 16px;
+    font-family: "Caveat" , Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+
+.icon-item i {
+    font-size: 50px;
+    margin-bottom: 8px;
+    
+}
+
+.icon-item span {
+    font-size: 16px;
+    color: #56647b;
+
+}
+
+@media (max-width: 768px) {
+    .icon-item {
+        width: calc(50% - 32px); /* Ширината на всяка икона, за да са две на ред */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-item {
+        width: calc(100% - 32px); /* Ширината на всяка икона, за да са една под друга */
+    }
+}
+
+/* MAGAZINE & MQ */
+
+.magazine-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.product-card {
+    
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(25% - 40px); /* Width adjusted with margin */
+    text-align: center;
+    background-color: rgba(241, 210, 240, 0.8);
+}
+
+.product-card img {
+    width: 500px;
+    border-radius: 8px;
+    height: 300px;
+    align-items: center;
+}
+
+.product-card2 {
+    
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(25% - 40px); /* Width adjusted with margin */
+    text-align: center;
+    background-color:rgba(241, 210, 240, 0.8);
+}
+.product-card2 img{
+    max-width: 100%;
+    border-radius: 8px;
+    height: 300px;
+    align-items: center;
+}
+.description {
+    margin: 10px 0;
+    color:#56647b;
+    text-align: center;
+    font-family: "Caveat" , Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.buy-button {
+    background-color:  #ea90e7;
+    color: #56647b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    letter-spacing: 2px;
+    font-family: "Caveat" , Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    
+
+}
+
+.buy-button:hover {
+    background-color: #444c59;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 40px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* 1 card per row */
+    }
+}
+@media (max-width: 768px) {
+    .product-card2 {
+        width: calc(50% - 40px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card2 {
+        width: 100%; /* 1 card per row */
+    }
+}
